@@ -18,11 +18,8 @@
             steps {
                 sh 'mkdir -p ${WORKSPACE}/remotepush && cp ${WORKSPACE}/build/libs/workspace.war ${WORKSPACE}/remotepush/'
                 sh 'cd ${WORKSPACE}/remotepush'
-                sh 'git init'
-                sh 'git add --all'
-                sh 'git commit -m "pushing to remote repo"'
-                sh 'git branch -M main'
                 sh 'git remote add origin https://github.com/duttamca/jenkinsbuildrepo.git'
+                sh 'git branch -M main'
                 sh 'git push -u origin main'
             }
          }
