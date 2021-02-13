@@ -16,7 +16,13 @@
          }
         stage ('Push to Remote ') {
             steps {
-                sh 'echo workspace directory ${WORKSPACE}'
+                sh 'mkdir -p ${WORKSPACE}/remotepush && cp ${WORKSPACE}/build/libs/workspace.war ${WORKSPACE}/remotepush/'
+                sh 'cd ${WORKSPACE}/remotepush'
+                sh 'git init'
+                sh 'git add --all'
+                sh 'git commit -m "pushing to remote repo"'
+                sh 'git remote add origin https://github.com/duttamca/jenkins_build.git'
+                sh 'git push -u origin main'
             }
          }
     }
