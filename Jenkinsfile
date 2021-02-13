@@ -20,6 +20,7 @@
                 sh 'cd ${WORKSPACE}/remotepush'
                 sh 'git clone https://github.com/duttamca/jenkinsbuildrepo.git'
                 sh 'cp ${WORKSPACE}/build/libs/workspace.war jenkinsbuildrepo/'
+                sh 'cd ${WORKSPACE}/remotepush/jenkinsbuildrepo'
                 sh 'git add --all'
                 sh 'git commit -m "first commit"'
                 sh 'git push'
