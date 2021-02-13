@@ -21,8 +21,8 @@
                 sh 'git init'
                 sh 'git add --all'
                 sh 'git commit -m "pushing to remote repo"'
-                sh 'git remote add origin https://github.com/duttamca/jenkins_build.git'
-                sh 'git push -u origin main'
+                sh 'git remote add remoterepo https://github.com/duttamca/jenkins_build.git'
+                sh 'git push -u remoterepo master'
             }
          }
     }
