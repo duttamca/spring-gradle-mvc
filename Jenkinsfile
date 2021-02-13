@@ -16,10 +16,10 @@
          }
         stage ('Push to Remote ') {
             steps {
-                sh 'mkdir -p ${WORKSPACE}/remotepush && cp ${WORKSPACE}/build/libs/workspace.war ${WORKSPACE}/remotepush/'
+                sh 'mkdir -p ${WORKSPACE}/remotepush'
                 sh 'cd ${WORKSPACE}/remotepush'
                 sh 'git clone https://github.com/duttamca/jenkinsbuildrepo.git'
-                sh 'git pull'
+                sh 'cp ${WORKSPACE}/build/libs/workspace.war jenkinsbuildrepo/'
                 sh 'git add --all'
                 sh 'git commit -m "first commit"'
                 sh 'git push'
