@@ -22,7 +22,7 @@
                 sh 'git add --all'
                 sh 'git commit -m "pushing to remote repo"'
                 sh 'git remote add remoterepo https://github.com/duttamca/jenkins_build.git'
-                sh 'git push -u remoterepo master'
+                sh 'git push -u remoterepo jenkins_build'
             }
          }
     }
