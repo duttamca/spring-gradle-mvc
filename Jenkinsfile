@@ -16,8 +16,8 @@
         stage ('Push to Remote ') {
             steps {
             sh '''
-                //rm -rf ${WORKSPACE}/remotepush && mkdir -p ${WORKSPACE}/remotepush
-                //sh 'cd remotepush'
+                #rm -rf ${WORKSPACE}/remotepush && mkdir -p ${WORKSPACE}/remotepush
+                #sh 'cd remotepush'
                 pwd
                 cp ${WORKSPACE}/build/libs/workspace.war .
                 git init
