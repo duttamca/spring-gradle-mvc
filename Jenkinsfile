@@ -23,7 +23,7 @@
                 sh 'git add --all'
                 sh 'git commit -m "first commit"'
                 sh 'git remote add origin1 https://github.com/duttamca/jenkinsbuildrepo.git'
-                sh 'git push origin1 main'
+                sh 'git push '
             }
          }
     }
