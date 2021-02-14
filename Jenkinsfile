@@ -25,7 +25,7 @@
                 sh 'git commit -m "first commit"'
                 //sh 'git remote set-url origin https://github.com/duttamca/jenkinsbuildrepo.git'
                 sh 'git remote add fakeorigin https://github.com/duttamca/jenkinsbuildrepo.git'
-                sh 'git push'
+                sh 'git push --set-upstream fakeorigin remote-repo'
             }
          }
     }
