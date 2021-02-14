@@ -15,17 +15,18 @@
          }
         stage ('Push to Remote ') {
             steps {
-                //sh 'rm -rf ${WORKSPACE}/remotepush && mkdir -p ${WORKSPACE}/remotepush'
+            sh '''
+                //rm -rf ${WORKSPACE}/remotepush && mkdir -p ${WORKSPACE}/remotepush
                 //sh 'cd remotepush'
-                sh 'pwd'
-                sh 'cp ${WORKSPACE}/build/libs/workspace.war .'
-                sh 'git init'
-                sh 'git checkout -b remote-repo'
-                sh 'git add --all'
-                sh 'git commit -m "first commit"'
-                //sh 'git remote set-url origin https://github.com/duttamca/jenkinsbuildrepo.git'
-                sh 'git remote add fakeorigin https://github.com/duttamca/jenkinsbuildrepo.git'
-                sh 'git push --set-upstream fakeorigin remote-repo'
+                pwd
+                cp ${WORKSPACE}/build/libs/workspace.war .
+                git init
+                git checkout -b remote-repo
+                git add --all
+                git commit -m "first commit"
+                git remote add fakeorigin https://github.com/duttamca/jenkinsbuildrepo.git
+                git push --set-upstream fakeorigin remote-repo
+            '''
             }
          }
     }
