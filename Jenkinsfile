@@ -1,5 +1,4 @@
 
-
  pipeline {
    agent any
    stages {
@@ -18,6 +17,7 @@
             steps {
                 sh 'rm -rf ${WORKSPACE}/remotepush && mkdir -p ${WORKSPACE}/remotepush'
                 sh 'cd ${WORKSPACE}/remotepush'
+                sh 'pwd'
                 sh 'cp ${WORKSPACE}/build/libs/workspace.war .'
                 sh 'git init'
                 sh 'git checkout -b remote-repo'
