@@ -22,7 +22,7 @@
                 sh 'git init'
                 sh 'git add --all'
                 sh 'git commit -m "first commit"'
-                sh 'git remote add -m jenkinsbuildrepo https://github.com/duttamca/jenkinsbuildrepo.git'
+                sh 'git remote add jenkinsbuildrepo https://github.com/duttamca/jenkinsbuildrepo.git'
                 sh 'git push '
             }
          }
