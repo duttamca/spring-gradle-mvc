@@ -20,9 +20,11 @@
                 sh 'cd ${WORKSPACE}/remotepush'
                 sh 'cp ${WORKSPACE}/build/libs/workspace.war .'
                 sh 'git init'
+                sh 'git checkout -b remote-repo'
                 sh 'git add --all'
                 sh 'git commit -m "first commit"'
-                sh 'git remote set-url origin https://github.com/duttamca/jenkinsbuildrepo.git'
+                //sh 'git remote set-url origin https://github.com/duttamca/jenkinsbuildrepo.git'
+                sh 'git remote add origin https://github.com/duttamca/jenkinsbuildrepo.git'
                 sh 'git push'
             }
          }
