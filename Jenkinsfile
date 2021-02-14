@@ -16,10 +16,10 @@
          }
         stage ('Push to Remote ') {
             steps {
-                sh 'mkdir -p ${WORKSPACE}/remotepush'
+                sh 'rm -rf ${WORKSPACE}/remotepush && mkdir -p ${WORKSPACE}/remotepush'
                 sh 'cd ${WORKSPACE}/remotepush'
                 sh 'cp ${WORKSPACE}/build/libs/workspace.war .'
-                sh 'git init -b main'
+                sh 'git init'
                 sh 'git add --all'
                 sh 'git commit -m "first commit"'
                 sh 'git remote add origin https://github.com/duttamca/jenkinsbuildrepo.git'
